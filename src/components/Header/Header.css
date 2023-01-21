@@ -1,0 +1,40 @@
+.header {
+    box-sizing: border-box;
+    height: 9rem;
+    background-color: #fff;
+    border-bottom: 4px solid var(--cor-primaria);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.header__logo {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.header__logo--imagem {
+    width: 2.5rem;
+}
+
+.header__logo--texto {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+.header__logo--texto span {
+    font-weight: 300;
+}
+
+.header__config {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header__config--imagem {
+    width: 2rem; 
+}

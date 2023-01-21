@@ -1,0 +1,49 @@
+.settings {
+    position: absolute;
+    background-color: var(--cor-secundaria);
+    box-sizing: border-box;
+    left: auto;
+    right: 0;
+    padding: 2rem;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    max-width: 750px;
+}
+
+.settings__header {
+    border-bottom: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+    gap: 1rem;
+}
+
+.settings__header--titulo {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.settings__header--fechar {
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.settings div {
+    margin-top: 1rem;
+}
+
+.settings__botao {
+    cursor: pointer;
+    margin-top: 2rem;
+    background-color: var(--cor-primaria);
+    border: none;
+    padding: .8rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: .9rem;
+}
