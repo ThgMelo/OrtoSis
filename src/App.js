@@ -1,8 +1,11 @@
 import Header from "./components/Header";
 import Resumo from "./components/Resumo";
 import { useState } from 'react';
+import Form from "./components/Form";
 
 function App() {
+
+  const formasDePagamento = ['Dinheiro', 'Cartão (Locador)', 'Pix (Locatário)'];
 
   const data = localStorage.getItem("settings");
   const [settingsList, setSettingsList] = useState(
@@ -31,6 +34,7 @@ function App() {
       />
       <main>
         <Resumo nomeLocador={nomeLocador} nomeLocatario={nomeLocatario} />
+        <Form formasDePagamento={formasDePagamento} />
       </main>
     </>
   );

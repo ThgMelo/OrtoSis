@@ -1,0 +1,19 @@
+.lista-suspensa {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-suspensa label {
+    margin-bottom: .5rem;
+    color: #fff;
+}
+
+.lista-suspensa select {
+    padding: .5rem;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    background-color: #fff;
+    cursor: pointer;
+    width: 150px;
+}
