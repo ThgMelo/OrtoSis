@@ -9,10 +9,11 @@ const Settings = ({ onClose }) => {
         data ? JSON.parse(data) : []
     );
 
-    const [nomeLocador, setNomeLocador] = useState(settingsList[0].nome);
-    const [valorLocador, setValorLocador] = useState(settingsList[0].valor);
-    const [nomeLocatario, setNomeLocatario] = useState(settingsList[1].nome);
-    const [valorLocatario, setValorLocatario] = useState(settingsList[1].valor);
+
+    const [nomeLocador, setNomeLocador] = useState(settingsList[0] ? settingsList[0].nome : "");
+    const [valorLocador, setValorLocador] = useState(settingsList[0] ? settingsList[0].valor : "");
+    const [nomeLocatario, setNomeLocatario] = useState(settingsList[1] ? settingsList[1].nome : "");
+    const [valorLocatario, setValorLocatario] = useState(settingsList[1] ? settingsList[1].valor : "");
 
     const aoSalvar = evento => {
         evento.preventDefault();
