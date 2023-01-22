@@ -1,22 +1,25 @@
 import CampoTexto from '../CampoTexto';
 import './Settings.css';
-import { useState } from 'react';
 
-const Settings = ({ onClose }) => {
-
-    const data = localStorage.getItem("settings");
-    const [settingsList, setSettingsList] = useState(
-        data ? JSON.parse(data) : []
-    );
-
-
-    const [nomeLocador, setNomeLocador] = useState(settingsList[0] ? settingsList[0].nome : "");
-    const [valorLocador, setValorLocador] = useState(settingsList[0] ? settingsList[0].valor : "");
-    const [nomeLocatario, setNomeLocatario] = useState(settingsList[1] ? settingsList[1].nome : "");
-    const [valorLocatario, setValorLocatario] = useState(settingsList[1] ? settingsList[1].valor : "");
+const Settings = ({
+    onClose,
+    settingsList,
+    setSettingsList,
+    nomeLocador,
+    setNomeLocador,
+    valorLocador,
+    setValorLocador,
+    nomeLocatario,
+    setNomeLocatario,
+    valorLocatario,
+    setValorLocatario
+}) => {
 
     const aoSalvar = evento => {
         evento.preventDefault();
+
+        if (!window.confirm("Você realmente deseja alterar as configurações?")) return;
+
         const settings = [
             {
                 nome: nomeLocador,

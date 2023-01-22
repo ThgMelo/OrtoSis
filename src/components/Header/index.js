@@ -2,7 +2,18 @@ import Settings from '../Settings';
 import './Header.css';
 import { useState } from 'react';
 
-const Header = () => {
+const Header = ({
+    settingsList,
+    setSettingsList,
+    nomeLocador,
+    setNomeLocador,
+    valorLocador,
+    setValorLocador,
+    nomeLocatario,
+    setNomeLocatario,
+    valorLocatario,
+    setValorLocatario
+}) => {
 
     const [isSettingsVisible, setIsSettingsVisible] = useState(false);
 
@@ -16,7 +27,20 @@ const Header = () => {
                 <img src="./images/configuracoes.png" alt="" className="header__config--imagem" />
             </button>
             {
-                isSettingsVisible ? <Settings onClose={() => setIsSettingsVisible(false)} /> : null
+                isSettingsVisible ?
+                    <Settings
+                        onClose={() => setIsSettingsVisible(false)}
+                        settingsList={settingsList}
+                        setSettingsList={setSettingsList}
+                        nomeLocador={nomeLocador}
+                        setNomeLocador={setNomeLocador}
+                        valorLocador={valorLocador}
+                        setValorLocador={setValorLocador}
+                        nomeLocatario={nomeLocatario}
+                        setNomeLocatario={setNomeLocatario}
+                        valorLocatario={valorLocatario}
+                        setValorLocatario={setValorLocatario}
+                    /> : null
             }
 
         </header>
