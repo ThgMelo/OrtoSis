@@ -1,0 +1,15 @@
+.grid-item__item {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--cor-terciaria);
+    font-size: .95rem;
+}
+
+.grid-item__imagem {
+    width: 1.2rem;
+    cursor: pointer;
+}
+
+.grid-item__line:hover {
+    background-color: var(--cor-terciaria);
+}

@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Resumo from "./components/Resumo";
 import { useEffect, useState } from 'react';
 import Form from "./components/Form";
+import Grid from "./components/Grid";
 
 function App() {
 
@@ -91,6 +92,7 @@ function App() {
           setAtendimentosList={setAtendimentosList}
           formasDePagamento={formasDePagamento}
         />
+        <Grid atendimentos={atendimentosList} setAtendimentos={setAtendimentosList} />
       </main>
     </>
   );
